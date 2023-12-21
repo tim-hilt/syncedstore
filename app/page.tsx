@@ -11,10 +11,6 @@ export type Point = {
 };
 
 const globalStore = syncedStore({ points: [] as Array<Point> });
-// TODO: How can I host this on Vercel?
-// TODO: Would I instantiate a new WebsocketProvider
-// for another room if I want to work on two separate charts?
-// TODO: How can I add authentication? Would I need NextAuth.js?
 new WebrtcProvider("oienarsoietnoi", getYjsValue(globalStore) as any);
 
 export default function Home() {
